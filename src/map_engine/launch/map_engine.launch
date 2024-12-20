@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="map_file" default="$(find map_engine)/maps/Town02.yaml"/>
+
+  <!-- Run the map server -->
+  <node name="map_server_global" pkg="map_server" type="map_server" args="$(arg map_file)" output="screen"/>
+
+  <!-- Run map_engine -->
+  <node name="local_costmap" pkg="map_engine" type="local_costmap" output="screen">
+  
+    
+  </node>
+
+</launch>

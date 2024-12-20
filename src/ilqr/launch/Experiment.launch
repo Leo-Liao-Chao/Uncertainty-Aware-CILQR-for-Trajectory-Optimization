@@ -1,0 +1,13 @@
+<launch>
+    <!-- 启动第一个节点 -->
+    <node name="ilqr_node" pkg="ilqr" type="ilqr_node" output="screen">
+        <!-- 向节点传递参数 -->
+    </node>
+
+    <param name="safe_length" value="1.1" /> <!-- 1.1 -->
+    <param name="safe_width" value="0.9" /> <!-- 0.9 -->
+    <param name="sigma_x" value="0.16" />
+    <param name="sigma_y" value="0.16" />
+    <param name="sigma_theta" value="0.017" />
+    <param name="w_uncertainty" value="1.0" />
+</launch>

@@ -1,0 +1,6 @@
+image: Town02.png
+resolution: 0.2
+origin: [-57.459860179, -356.560706852, 0.0]
+negate: 0
+occupied_thresh: 0.80
+free_thresh: 0.55

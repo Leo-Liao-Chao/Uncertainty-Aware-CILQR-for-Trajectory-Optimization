@@ -1,0 +1,6 @@
+image: h301.png
+resolution: 0.2
+origin: [-1.3, -13.6, 0.0]
+negate: 0
+occupied_thresh: 0.80
+free_thresh: 0.55
