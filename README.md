@@ -1,53 +1,19 @@
-make:
 
-```
-source /opt/intel/oneapi/setvars.sh
-```
+This repository contains three algorithms: CILQR, CCNMPC, and Frenet. Specifically:
 
-```
-catkin_make -DCMAKE_BUILD_TYPE=Release
-```
+- CCNMPC
+- CILQR (Our Contribution)
+- Frenet
+
+Each directory includes detailed instructions on how to compile and run the respective algorithm.
+
+The main environment requirements are:
+
+- Cara 0.9.10
+- Casadi
+- CUDA
+- oneMKL
 
 ---
 
-Start:
-
-1. Carla:
-
-   ```
-   conda activate Carla &&
-   cd CARLA && 
-   SDL_VIDEODRIVER=offscreen ./CarlaUE4.sh -opengl
-   ```
-2. ros-bridge: change start position
-
-   ```
-   conda deactivate &&
-   cd carla-ros-bridge/catkin_ws_changed/ &&
-   source devel/setup.bash &&
-   roslaunch carla_ad_demo carla_ad_demo.launch
-   ```
-3. vehiclepub:
-
-   ```
-   conda deactivate && source devel/setup.bash
-   rosrun vehiclepub main.py
-   ```
-4. map_engine:
-
-   ```
-   rosrun rqt_reconfigure rqt_reconfigure
-   roslaunch map_engine map_engine.launch
-   ```
-5. cilqr:
-
-   ```
-   source /opt/intel/oneapi/setvars.sh 
-   roslaunch ilqr Experiment.launch
-   ```
-6. record:
-
-   ```
-   rosbag record -O 1 /experiment
-
-   ```
+Another related algorithm, NRB-RRT*, can be found in the repository [GitHub - TSummersLab/Risk_Bounded_Nonlinear_Robot_Motion_Planning: This repository contains the code for designing risk bounded motion plans for car-like robot using Carla Simulator.](https://github.com/TSummersLab/Risk_Bounded_Nonlinear_Robot_Motion_Planning).
